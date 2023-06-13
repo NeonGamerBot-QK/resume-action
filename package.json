@@ -1,0 +1,15 @@
+{
+  "name": "resume-action",
+  "version": "0.0.1",
+  "description": "A GH action for github-resume",
+  "main": "index.js",
+  "repository": "https://github.com/NeonGamerBot-QK/resume-action",
+  "author": "Saahil <saahilattud@gmail.com>",
+  "license": "Apache",
+  "private": false,
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
