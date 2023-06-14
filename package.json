@@ -15,5 +15,8 @@
     "@actions/github": "^5.1.1",
     "@vercel/ncc": "^0.36.1",
     "puppeteer": "^20.7.1"
+  },
+  "devDependencies": {
+    "chromedriver": "^114.0.2"
   }
 }
