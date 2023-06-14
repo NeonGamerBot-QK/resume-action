@@ -1,3 +1,5 @@
+const fs = require("fs")
+const path = require("path")
 const core = require('@actions/core');
 const github = require('@actions/github');
 const puppeteer = require('puppeteer');
@@ -13,7 +15,8 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage();
     await page.goto('https://resume.github.io/?'+ghUsername);
     // Get the JSON webhook payload for the event that triggered the workflow
-    await page.pdf({ path: filePath })
+    fs.mkdirSync("dist")
+    await page.pdf({ path: path.join( "dist", filePath )})
 
     const payload = JSON.stringify(github.context.payload, undefined, 2)
     console.log(`The event payload: ${payload}`);

@@ -32,7 +32,8 @@ jobs:
 
       - name: ensure the generated file exists
         run: |
-          test -f file.pdf
+          ls dist
+          test -f dist/file.pdf
           
     #   - uses: crazy-max/ghaction-github-pages@v3.1.0
     #     with:
