@@ -1,3 +1,9 @@
+# Resume Generator
+
+a github action which generates your own resume based on your info in github.
+
+### Example workflow
+```yml
 name: Make Resume
 
 on: [push]
@@ -19,3 +25,4 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
