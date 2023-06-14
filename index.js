@@ -7,8 +7,8 @@ const puppeteer = require('puppeteer');
 ;(async () => {
   try {
     // `who-to-greet` input defined in action metadata file
-    const filePath = core.getInput('output');
-    const ghUsername = core.getInput('github_user_name');
+    const filePath = core.getInput('output') || "file.pdf";
+    const ghUsername = core.getInput('github_user_name') || "NeonGamerBot-QK";
     console.log(`Writing to ${filePath}!`);
     // const time = (new Date()).toTimeString();
     // core.setOutput("time", time);
