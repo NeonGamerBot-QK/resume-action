@@ -1,6 +1,9 @@
 name: 'Github Resume Generator'
 description: 'Greet someone and record the time'
 author: Saahil
+runs:
+  using: node16
+  main: index.js
 inputs:
   github_user_name:
     description: "github user name"
