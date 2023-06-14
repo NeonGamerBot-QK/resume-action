@@ -3,9 +3,19 @@ name: main
 on: [push]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+#   test:
+    # runs-on: ubuntu-latest
 
+    # steps:
+    #   - uses: actions/checkout@v3
+    #   - uses: actions/setup-node@v3
+    #     with:
+    #       cache: yarn
+    #       node-version: 16
+    #   - run: yarn install --frozen-lockfile
+
+  test-action:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -13,11 +23,6 @@ jobs:
           cache: yarn
           node-version: 16
       - run: yarn install --frozen-lockfile
-
-  test-action:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
 
       - name: make-resume
         id: make-resume
