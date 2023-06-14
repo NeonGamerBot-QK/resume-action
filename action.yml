@@ -7,7 +7,7 @@ inputs:
     required: true
   output:
     required: false
-    default: null
+    default: "file.pdf"
     description: |
       File name for the output file.
 
